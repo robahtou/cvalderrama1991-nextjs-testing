@@ -6,6 +6,19 @@
   --primary: royalblue;
   --background: black;
   --text: white;
+
+  /* COLORS */
+  --gray-400: #DBDEE1;
+  --gray-600: #888995;
+  --gray-700: #7F808C;
+  --gray-800: #585967;
+
+  /* ICONS */
+  --icon-width: 24px;
+  --icon-height: 24px;
+  --icon-fill: var(--gray-700);
+  --icon-hover: var(--gray-800);
+  --icon-focus: var(--gray-400);
 }
 
 [data-theme='dark'] {
@@ -19,24 +32,18 @@ body {
   color: var(--text);
 }
 
+
+/* GLOBAL CSS FOR ICONS */
 .icon {
-  width: 24px;
-  height: 24px;
-
-  color: red;
-}
-.icon-bars {
-  color: green;
-  width: 18px;
-  height: 12px;
+  width: var(--icon-width);
+  height: var(--icon-height);
+  color: var(--icon-fill);
 }
 
+/* apply whatever colors for pseudo classes from theme */
 .icon:hover {
-  color: blue;
-}
-.icon:active {
-  color: green;
+  color: var(--icon-hover);
 }
 .icon:focus {
-  color: yellow;
+  color: var(--icon-focus);
 }

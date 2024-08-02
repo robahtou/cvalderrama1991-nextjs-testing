@@ -1,5 +1,8 @@
 import Icon from '../components/Sprite';
 import CounterComponent from '@/components/CounterComponent';
+import styles from './styles.module.css';
+
+console.log(styles)
 
 export default async function Home() {
   return (
@@ -8,7 +11,7 @@ export default async function Home() {
       <Icon name="arrow-right" />
 
       <div style={{ display: "flex", alignItems: "center", marginBlock: "20px" }}>
-        <Icon name="bars" style={{ color: 'yellow' }} />
+        <Icon name="bars" className={styles['bars']} />
         <span style={{ 'marginInlineStart': '50px' }}>
           using inline style will override the pseudo class (will not hover)
         </span>

@@ -1,19 +1,13 @@
 import { SVGProps } from 'react';
 
-type Props = {
-  name: string;
-  props?: SVGProps<SVGSVGElement>;
-  style?: React.CSSProperties;
-};
 
-export default function Icon({ name, style, ...props }: Props) {
+function Icon({ name, className='', ...props }: { name: string} & SVGProps<SVGSVGElement>) {
   return (
-    <svg
-      className={`icon icon-${name}`}
-      {...props}
-      style={style}
-    >
+    <svg className={`icon icon-${name} ${className}`} {...props}>
       <use href={`sprite.svg#icon-${name}`} />
     </svg>
   );
 }
+
+
+export default Icon;

@@ -4,8 +4,8 @@
 
 :root {
   --primary: royalblue;
-  --background: white;
-  --text: black;
+  --background: black;
+  --text: white;
 }
 
 [data-theme='dark'] {
@@ -17,4 +17,26 @@
 body {
   background-color: var(--background);
   color: var(--text);
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+
+  color: red;
+}
+.icon-bars {
+  color: green;
+  width: 18px;
+  height: 12px;
+}
+
+.icon:hover {
+  color: blue;
+}
+.icon:active {
+  color: green;
+}
+.icon:focus {
+  color: yellow;
 }
